@@ -1,0 +1,131 @@
+#include "config\params.hpp"
+#include "config_map\missionName.hpp"
+
+//Revo's TP Function
+	import ctrlListBox;
+	import ctrlButton;
+	import ctrlStaticTitle;
+	import ctrlStaticBackground;
+
+	#include "scripts\TPD_teleportDialog\GUI.hpp"
+
+// AFK script
+	#include "sia_f\goAFK\defines.hpp"
+	#include "sia_f\goAFK\control.hpp"
+
+class CfgFunctions
+{
+	
+	class TPD
+  {
+	tag = "TPD";
+	class Initialize
+	{
+	  file = "scripts\TPD_teleportDialog";
+	  class teleport;
+	};
+  };
+};
+
+
+class Header
+{
+	gameType =  Zeus;
+	minPlayers =  1;
+	maxPlayers = 40;
+};
+
+disabledAI = 1;
+
+respawnTemplates[] = {"ace_spectator","Counter","Wave"};
+
+author="Soldiers in Arms";
+onLoadMission="Welcome to Zeus with Soldiers in Arms!  Version 2.097";
+
+respawn=3;
+respawnDelay=30;
+respawnOnStart=-1;
+
+
+class CfgRadioStations {
+  class my_station {
+    name = "Greece - Derti - FM 98.6";
+    url = "http://iphone.live24.gr/derty1000";
+  };
+   class my_station2 {
+    name = "French Polynesia - Taire - FM 104.2";
+    url = "https://live.tiarefm.pf:8443/tiarefm";
+  };
+   class my_station3 {
+    name = "French Polynesia - Radio 1 - FM 100.0";
+    url = "http://live.radio1.pf:8001/radio1";
+  };
+    class my_station4 {
+    name = "Afghanistan - Spogmai - FM 102.2";
+    url = "http://ca10.rcast.net:8026/;stream.mp3";
+  };
+    class my_station5 {
+    name = "UK - BFBS - FM 102.1";
+    url = "https://edge-audio-02-gos1.sharp-stream.com/ssvcbfbs9.mp3?i=ssvcbfbs9.mp3";
+  };
+    class my_station6 {
+    name = "Afghanistan - BBC Pahsto";
+    url = "http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-pasha";
+  };
+    class my_station7 {
+    name = "Classic Rock Radio";
+    url = "https://us5.internet-radio.com/proxy/wcrr?mp=/stream";
+  };
+	class my_station8 {
+    name = "FM Reggae Radio";
+    url = "http://us5.internet-radio.com:8487/stream?type=http&nocache=593";
+  };
+	class my_station10 {
+    name = "181.FM Christmas Classics";
+    url = "http://listen.181fm.com/181-xtrue_128k.mp3";
+  };
+	class my_station11 {
+    name = "181.FM Old School Hip/Hop";
+    url = "http://listen.181fm.com/181-oldschool_128k.mp3";
+  };   
+	class my_station12 {
+    name = "Fox News Radio";
+    url = "https://streaming-ent.shoutcast.com/foxnews";
+  };   
+	class my_station13 {
+    name = "Rock On LA";
+    url = "https://streaming.radiostreamlive.com/radiorockon_devices";
+  };
+  	class my_station14 {
+    name = "181.FM Good Time Oldies";
+    url = "http://listen.181fm.com/181-goodtime_128k.mp3?listenerId=8a92db90f892f684a5ac9987c6001e52&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1630618881";
+  };
+	class my_station15 {
+    name = "181.FM Classic Hits";
+    url = "http://listen.181fm.com/181-greatoldies_128k.mp3?listenerId=8a92db90f892f684a5ac9987c6001e52&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1630619007";
+  };
+	class my_station16 {
+    name = "181.FM Soul";
+    url = "http://listen.181fm.com/181-soul_128k.mp3?listenerId=8a92db90f892f684a5ac9987c6001e52&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1630618977";
+  };
+	class my_station17 {
+    name = "181.FM Super 70s";
+    url = "http://listen.181fm.com/181-70s_128k.mp3?listenerId=8a92db90f892f684a5ac9987c6001e52&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1630619365";
+  };
+	class my_station18 {
+    name = "181.FM The Eagle (Classic)";
+    url = "http://listen.181fm.com/181-eagle_128k.mp3?listenerId=8a92db90f892f684a5ac9987c6001e52&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1630619563";
+  };
+	class my_station19 {
+    name = "181.FM The Buzz (Alt. Rock)";
+    url = "http://listen.181fm.com/181-buzz_128k.mp3?listenerId=8a92db90f892f684a5ac9987c6001e52&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1630619644";
+  };
+	class my_station20 {
+    name = "181.FM The Beat (HipHop/R&B)";
+    url = "http://listen.181fm.com/181-beat_128k.mp3?listenerId=8a92db90f892f684a5ac9987c6001e52&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1630619698";
+  }; 
+	class my_station21 {
+    name = "181.FM The Box (HipHop/R&B)";
+    url = "http://listen.181fm.com/181-thebox_128k.mp3?listenerId=8a92db90f892f684a5ac9987c6001e52&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1630619792";
+  };  
+};  

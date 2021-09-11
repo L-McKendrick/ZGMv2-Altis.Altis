@@ -1,0 +1,1 @@
+for [{_i = 0}, {_i < 4}, {_i = _i + 1}] do {sleep 3; execVM "scripts\skeet.sqf"; sleep 3;}; 

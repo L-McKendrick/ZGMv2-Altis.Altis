@@ -1,0 +1,3958 @@
+version=54;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=64;
+	};
+	class LayerIndexProvider
+	{
+		nextID=6;
+	};
+	class Camera
+	{
+		pos[]={4.9383903,10.648011,0.54593128};
+		dir[]={-0.74134177,-0.67085135,0.019743528};
+		up[]={-0.67061347,0.74159306,0.017859779};
+		aside[]={0.026621452,-5.3347321e-007,0.99965513};
+	};
+};
+binarizationWanted=0;
+sourceName="sqm";
+addons[]=
+{
+	"A3_Modules_F_Curator_Curator",
+	"A3_Ui_F",
+	"A3_Characters_F",
+	"A3_Characters_F_Mark",
+	"A3_Weapons_F_Rifles_MX",
+	"A3_Weapons_F_Acc",
+	"A3_Weapons_F",
+	"A3_Weapons_F_Pistols_P07",
+	"acre_main",
+	"A3_Weapons_F_Items",
+	"acre_api"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=7;
+		class Item0
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Characters_F_Mark";
+			name="Arma 3 Marksmen - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="acre_main";
+			name="ACRE2 - Main";
+			author="ACRE2Team";
+			url="https://github.com/IDI-Systems/acre2";
+		};
+		class Item6
+		{
+			className="acre_api";
+			name="ACRE2 - API";
+			author="ACRE2Team";
+			url="https://github.com/IDI-Systems/acre2";
+		};
+	};
+};
+dlcs[]=
+{
+	"Mark"
+};
+randomSeed=14138754;
+class ScenarioData
+{
+	author="Liam McKendrick";
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="None";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		overviewText="Fill roles squad by squad. Check with Zeus before taking any non-infantry roles.";
+		resistanceWest=0;
+		timeOfChanges=1800.0002;
+		startWeather=0.2;
+		startWind=0.60000002;
+		startWaves=0.1;
+		forecastWeather=0.20499;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2020;
+		month=3;
+		day=18;
+		hour=8;
+		minute=0;
+		startFogBase=3;
+		startFogDecay=0.0099999998;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=3;
+		class Item0
+		{
+			dataType="Layer";
+			name="ZGMv2 BASE";
+			class Entities
+			{
+				items=7;
+				class Item0
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={0,5,0};
+						angles[]={0.037314966,0,0};
+					};
+					id=52;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="gm";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="gm";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item1
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={0,5,0};
+						angles[]={0.0053377044,0,0.031988446};
+					};
+					id=53;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="gmod";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="gmod";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={0,0,0};
+					name="respawn_civilian";
+					type="Empty";
+					id=54;
+					atlOffset=-5;
+				};
+				class Item3
+				{
+					dataType="Marker";
+					position[]={0,0,0};
+					name="respawn_east";
+					type="Empty";
+					id=55;
+					atlOffset=-5;
+				};
+				class Item4
+				{
+					dataType="Marker";
+					position[]={0,0,0};
+					name="respawn_guerilla";
+					type="Empty";
+					id=56;
+					atlOffset=-5;
+				};
+				class Item5
+				{
+					dataType="Marker";
+					position[]={0,0,0};
+					name="respawn_west";
+					type="Empty";
+					id=57;
+					atlOffset=-5;
+				};
+				class Item6
+				{
+					dataType="Layer";
+					name="Players";
+					class Entities
+					{
+						items=14;
+						class Item0
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=2;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										rank="SERGEANT";
+										init="call{this setVariable [""role"", ""sl""]; this setVariable [""squad"", ""Alpha Lead""]; }";
+										description="Squad Leader@Alpha Lead";
+										isPlayer=1;
+										isPlayable=1;
+									};
+									id=2;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male03ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.98000002;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										init="call{this setVariable [""role"", ""medic""]; this setVariable [""squad"", ""Alpha Lead""]; }";
+										description="Squad Medic";
+										isPlayable=1;
+									};
+									id=3;
+									type="B_medic_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male05ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.05;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=1;
+						};
+						class Item1
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=4;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										rank="CORPORAL";
+										init="call{this setVariable [""role"", ""tl""]; this setVariable [""squad"", ""Alpha 1""]; }";
+										description="Team Leader@Alpha 1";
+										isPlayable=1;
+									};
+									id=5;
+									type="B_Soldier_TL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male06ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										skill=0.44999999;
+										init="call{this setVariable [""role"", ""ar""]; this setVariable [""squad"", ""Alpha 1""]; }";
+										description="Autorifleman";
+										isPlayable=1;
+									};
+									id=6;
+									type="B_soldier_AR_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.02;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item2
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=4;
+									class Attributes
+									{
+										skill=0.40000001;
+										init="call{this setVariable [""role"", ""r""]; this setVariable [""squad"", ""Alpha 1""]; }";
+										description="Rifleman";
+										isPlayable=1;
+									};
+									id=7;
+									type="B_Soldier_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male03ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item3
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										skill=0.40000001;
+										init="call{this setVariable [""role"", ""at""]; this setVariable [""squad"", ""Alpha 1""]; }";
+										description="Rifleman (AT)";
+										isPlayable=1;
+									};
+									id=8;
+									type="B_soldier_LAT_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male10ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.94999999;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=4;
+						};
+						class Item2
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=4;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										rank="CORPORAL";
+										init="call{this setVariable [""role"", ""tl""]; this setVariable [""squad"", ""Alpha 2""]; }";
+										description="Team Leader@Alpha 2";
+										isPlayable=1;
+									};
+									id=10;
+									type="B_Soldier_TL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male06ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										skill=0.44999999;
+										init="call{this setVariable [""role"", ""ar""]; this setVariable [""squad"", ""Alpha 2""]; }";
+										description="Autorifleman";
+										isPlayable=1;
+									};
+									id=11;
+									type="B_soldier_AR_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.02;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item2
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=4;
+									class Attributes
+									{
+										skill=0.40000001;
+										init="call{this setVariable [""role"", ""r""]; this setVariable [""squad"", ""Alpha 2""]; }";
+										description="Rifleman";
+										isPlayable=1;
+									};
+									id=12;
+									type="B_Soldier_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male03ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item3
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										skill=0.40000001;
+										init="call{this setVariable [""role"", ""at""]; this setVariable [""squad"", ""Alpha 2""]; }";
+										description="Rifleman (AT)";
+										isPlayable=1;
+									};
+									id=13;
+									type="B_soldier_LAT_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male06ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.99000001;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=9;
+						};
+						class Item3
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=2;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										rank="SERGEANT";
+										init="call{this setVariable [""role"", ""sl""]; this setVariable [""squad"", ""Bravo Lead""]; }";
+										description="Squad Leader@Bravo Lead";
+										isPlayable=1;
+									};
+									id=15;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male03ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.98000002;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										init="call{this setVariable [""role"", ""medic""]; this setVariable [""squad"", ""Bravo Lead""]; }";
+										description="Squad Medic";
+										isPlayable=1;
+									};
+									id=16;
+									type="B_medic_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male05ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.05;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=14;
+						};
+						class Item4
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=4;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										rank="CORPORAL";
+										init="call{this setVariable [""role"", ""tl""]; this setVariable [""squad"", ""Bravo 1""]; }";
+										description="Team Leader@Bravo 1";
+										isPlayable=1;
+									};
+									id=18;
+									type="B_Soldier_TL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male06ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										skill=0.44999999;
+										init="call{this setVariable [""role"", ""ar""]; this setVariable [""squad"", ""Bravo 1""]; }";
+										description="Autorifleman";
+										isPlayable=1;
+									};
+									id=19;
+									type="B_soldier_AR_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.02;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item2
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=4;
+									class Attributes
+									{
+										skill=0.40000001;
+										init="call{this setVariable [""role"", ""r""]; this setVariable [""squad"", ""Bravo 1""]; }";
+										description="Rifleman";
+										isPlayable=1;
+									};
+									id=20;
+									type="B_Soldier_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male03ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item3
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										skill=0.40000001;
+										init="call{this setVariable [""role"", ""at""]; this setVariable [""squad"", ""Bravo 1""]; }";
+										description="Rifleman (AT)";
+										isPlayable=1;
+									};
+									id=21;
+									type="B_soldier_LAT_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male08ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.98000002;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=17;
+						};
+						class Item5
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=4;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										rank="CORPORAL";
+										init="call{this setVariable [""role"", ""tl""]; this setVariable [""squad"", ""Bravo 2""]; }";
+										description="Team Leader@Bravo 2";
+										isPlayable=1;
+									};
+									id=23;
+									type="B_Soldier_TL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male06ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										skill=0.44999999;
+										init="call{this setVariable [""role"", ""ar""]; this setVariable [""squad"", ""Bravo 2""]; }";
+										description="Autorifleman";
+										isPlayable=1;
+									};
+									id=24;
+									type="B_soldier_AR_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.02;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item2
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=4;
+									class Attributes
+									{
+										skill=0.40000001;
+										init="call{this setVariable [""role"", ""r""]; this setVariable [""squad"", ""Bravo 2""]; }";
+										description="Rifleman";
+										isPlayable=1;
+									};
+									id=25;
+									type="B_Soldier_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male03ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item3
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										skill=0.40000001;
+										init="call{this setVariable [""role"", ""at""]; this setVariable [""squad"", ""Bravo 2""]; }";
+										description="Rifleman (AT)";
+										isPlayable=1;
+									};
+									id=26;
+									type="B_soldier_LAT_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male01ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.99000001;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=22;
+						};
+						class Item6
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=2;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										rank="SERGEANT";
+										init="call{this setVariable [""role"", ""sniper""]; this setVariable [""squad"", ""Delta""]; }";
+										description="Sniper@Delta";
+										isPlayable=1;
+									};
+									id=28;
+									type="B_ghillie_sard_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male02ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.99000001;
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="face";
+											expression="_this setface _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="";
+												};
+											};
+										};
+										nAttributes=4;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										rank="CORPORAL";
+										init="call{this setVariable [""role"", ""spotter""]; this setVariable [""squad"", ""Delta""]; }";
+										description="Spotter";
+										isPlayable=1;
+									};
+									id=29;
+									type="B_spotter_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male10ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.01;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=27;
+						};
+						class Item7
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=3;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										rank="SERGEANT";
+										init="call{this setVariable [""role"", ""crewman""]; this setVariable [""ACE_IsEngineer"", 1]; this setVariable [""squad"", ""Anvil""]; }";
+										description="Crewman@Anvil";
+										isPlayable=1;
+									};
+									id=31;
+									type="B_crew_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male01ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.03;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										init="call{this setVariable [""role"", ""crewman""]; this setVariable [""ACE_IsEngineer"", 1]; this setVariable [""squad"", ""Anvil""]; }";
+										description="Crewman";
+										isPlayable=1;
+									};
+									id=32;
+									type="B_crew_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										nAttributes=1;
+									};
+								};
+								class Item2
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										init="call{this setVariable [""role"", ""crewman""]; this setVariable [""ACE_IsEngineer"", 1]; this setVariable [""squad"", ""Anvil""]; }";
+										description="Crewman";
+										isPlayable=1;
+									};
+									id=33;
+									type="B_crew_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										nAttributes=1;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=30;
+						};
+						class Item8
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=3;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										rank="SERGEANT";
+										init="call{this setVariable [""role"", ""crewman""]; this setVariable [""ACE_IsEngineer"", 1]; this setVariable [""squad"", ""Hammer""]; }";
+										description="Tank Crewman@Hammer";
+										isPlayable=1;
+									};
+									id=35;
+									type="B_crew_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male05ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.98000002;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										init="call{this setVariable [""role"", ""crewman""]; this setVariable [""ACE_IsEngineer"", 1]; this setVariable [""squad"", ""Hammer""]; }";
+										description="Tank Crewman";
+										isPlayable=1;
+									};
+									id=36;
+									type="B_crew_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male08ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.97000003;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item2
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										init="call{this setVariable [""role"", ""crewman""]; this setVariable [""ACE_IsEngineer"", 1]; this setVariable [""squad"", ""Hammer""]; }";
+										description="Tank Crewman";
+										isPlayable=1;
+									};
+									id=37;
+									type="B_crew_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male06ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.99000001;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=34;
+						};
+						class Item9
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=2;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										rank="LIEUTENANT";
+										init="call{this setVariable [""role"", ""heli_pilot""]; this setVariable [""squad"", ""November""]; }";
+										description="Helicopter Pilot@November";
+										isPlayable=1;
+									};
+									id=39;
+									type="B_Helipilot_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male03ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.99000001;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										rank="SERGEANT";
+										init="call{this setVariable [""role"", ""heli_pilot""]; this setVariable [""squad"", ""November""]; }";
+										description="Helicopter Pilot";
+										isPlayable=1;
+									};
+									id=40;
+									type="B_Helipilot_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male11ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.99000001;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=38;
+						};
+						class Item10
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=2;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										rank="CAPTAIN";
+										init="call{this setVariable [""role"", ""jet_pilot""]; this setVariable [""squad"", ""Vortex""]; }";
+										description="Jet Pilot@Vortex";
+										isPlayable=1;
+									};
+									id=42;
+									type="B_Pilot_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male02ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.01;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										rank="LIEUTENANT";
+										init="call{this setVariable [""role"", ""jet_pilot""]; this setVariable [""squad"", ""Vortex""]; }";
+										description="Jet Pilot";
+										isPlayable=1;
+									};
+									id=43;
+									type="B_Pilot_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male05ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.95999998;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=41;
+						};
+						class Item11
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=4;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										rank="LIEUTENANT";
+										init="call{this setVariable [""role"", ""pl""]; this setVariable [""squad"", ""Plt Co""]; }";
+										description="Platoon Leader@Platoon Command";
+										isPlayable=1;
+										class Inventory
+										{
+											class primaryWeapon
+											{
+												name="arifle_MX_GL_Hamr_pointer_F";
+												optics="optic_Hamr";
+												flashlight="acc_pointer_IR";
+												class primaryMuzzleMag
+												{
+													name="30Rnd_65x39_caseless_mag";
+													ammoLeft=30;
+												};
+												class secondaryMuzzleMag
+												{
+													name="1Rnd_HE_Grenade_shell";
+													ammoLeft=1;
+												};
+											};
+											class handgun
+											{
+												name="hgun_P07_F";
+												class primaryMuzzleMag
+												{
+													name="16Rnd_9x21_Mag";
+													ammoLeft=16;
+												};
+											};
+											class binocular
+											{
+												name="Binocular";
+											};
+											class uniform
+											{
+												typeName="U_B_CombatUniform_mcam_vest";
+												isBackpack=0;
+												class MagazineCargo
+												{
+													items=2;
+													class Item0
+													{
+														name="30Rnd_65x39_caseless_mag";
+														count=2;
+														ammoLeft=30;
+													};
+													class Item1
+													{
+														name="Chemlight_green";
+														count=1;
+														ammoLeft=1;
+													};
+												};
+												class ItemCargo
+												{
+													items=1;
+													class Item0
+													{
+														name="FirstAidKit";
+														count=1;
+													};
+												};
+											};
+											class vest
+											{
+												typeName="V_PlateCarrierGL_rgr";
+												isBackpack=0;
+												class MagazineCargo
+												{
+													items=14;
+													class Item0
+													{
+														name="30Rnd_65x39_caseless_mag";
+														count=1;
+														ammoLeft=30;
+													};
+													class Item1
+													{
+														name="30Rnd_65x39_caseless_mag_Tracer";
+														count=2;
+														ammoLeft=30;
+													};
+													class Item2
+													{
+														name="16Rnd_9x21_Mag";
+														count=2;
+														ammoLeft=16;
+													};
+													class Item3
+													{
+														name="MiniGrenade";
+														count=2;
+														ammoLeft=1;
+													};
+													class Item4
+													{
+														name="1Rnd_HE_Grenade_shell";
+														count=5;
+														ammoLeft=1;
+													};
+													class Item5
+													{
+														name="SmokeShell";
+														count=1;
+														ammoLeft=1;
+													};
+													class Item6
+													{
+														name="SmokeShellGreen";
+														count=1;
+														ammoLeft=1;
+													};
+													class Item7
+													{
+														name="SmokeShellBlue";
+														count=1;
+														ammoLeft=1;
+													};
+													class Item8
+													{
+														name="SmokeShellOrange";
+														count=1;
+														ammoLeft=1;
+													};
+													class Item9
+													{
+														name="Chemlight_green";
+														count=1;
+														ammoLeft=1;
+													};
+													class Item10
+													{
+														name="1Rnd_Smoke_Grenade_shell";
+														count=2;
+														ammoLeft=1;
+													};
+													class Item11
+													{
+														name="1Rnd_SmokeBlue_Grenade_shell";
+														count=1;
+														ammoLeft=1;
+													};
+													class Item12
+													{
+														name="1Rnd_SmokeGreen_Grenade_shell";
+														count=1;
+														ammoLeft=1;
+													};
+													class Item13
+													{
+														name="1Rnd_SmokeOrange_Grenade_shell";
+														count=1;
+														ammoLeft=1;
+													};
+												};
+											};
+											map="ItemMap";
+											compass="ItemCompass";
+											watch="ItemWatch";
+											radio="ItemRadio";
+											gps="ItemGPS";
+											hmd="NVGoggles";
+											headgear="H_HelmetSpecB";
+										};
+									};
+									id=45;
+									type="B_officer_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male11ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.99000001;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										rank="SERGEANT";
+										init="call{this setVariable [""role"", ""pl""]; this setVariable [""squad"", ""Plt Co""]; }";
+										description="Platoon Sergeant";
+										isPlayable=1;
+									};
+									id=46;
+									type="B_Soldier_SL_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male03ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.01;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item2
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										rank="CORPORAL";
+										init="call{this setVariable [""role"", ""medic""]; this setVariable [""squad"", ""Plt Co""]; }";
+										description="Platoon Medic";
+										isPlayable=1;
+									};
+									id=47;
+									type="B_medic_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male08ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.97000003;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item3
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										init="call{this setVariable [""role"", ""r""]; this setVariable [""squad"", ""Plt Co""]; }";
+										description="Rifleman";
+										isPlayable=1;
+									};
+									id=48;
+									type="B_Soldier_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male10ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.02;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=44;
+						};
+						class Item12
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										rank="LIEUTENANT";
+										init="call{this setVariable [""role"", ""heli_pilot""]; this setVariable [""squad"", ""Northstar""]; }";
+										description="Drone Operator@Northstar";
+										isPlayable=1;
+									};
+									id=61;
+									type="B_Helipilot_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male03ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.99000001;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=60;
+						};
+						class Item13
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=2;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=7;
+									class Attributes
+									{
+										init="call{this setVariable [""role"", ""pl""]; this setVariable [""squad"", ""Command""]; }";
+										name="gm";
+										description="Game Master@Zeus";
+										isPlayable=1;
+									};
+									id=50;
+									type="B_officer_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male04ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.04;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={0,5.0014391,0.050000012};
+									};
+									side="West";
+									flags=5;
+									class Attributes
+									{
+										init="call{this setVariable [""role"", ""pl""]; this setVariable [""squad"", ""Command""]; }";
+										name="gmod";
+										description="Game Moderator";
+										isPlayable=1;
+									};
+									id=51;
+									type="B_officer_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male03ENG";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.95999998;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+							};
+							class Attributes
+							{
+								name="zeus";
+							};
+							id=49;
+						};
+					};
+					id=0;
+				};
+			};
+			id=58;
+			atlOffset=-2.34375;
+		};
+		class Item1
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={0,5,0};
+			};
+			name="HC";
+			isPlayable=1;
+			id=59;
+			type="HeadlessClient_F";
+		};
+		class Item2
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={0,5,0};
+			};
+			id=62;
+			type="acre_api_basicMissionSetup";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acre_api_basicMissionSetup_DefaultRadio";
+					expression="_this setVariable ['DefaultRadio',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acre_api_basicMissionSetup_BabelSetup";
+					expression="_this setVariable ['BabelSetup',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="acre_api_basicMissionSetup_RadioSetup";
+					expression="_this setVariable ['RadioSetup',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="acre_api_basicMissionSetup_DefaultRadio_Three";
+					expression="_this setVariable ['DefaultRadio_Three',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="acre_api_basicMissionSetup_DefaultRadio_Four";
+					expression="_this setVariable ['DefaultRadio_Four',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="acre_api_basicMissionSetup_DefaultRadio_Two";
+					expression="_this setVariable ['DefaultRadio_Two',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=6;
+			};
+		};
+	};
+};
