@@ -55,7 +55,7 @@ disabledAI = 1;
 respawnTemplates[] = {"ace_spectator","Counter","Wave"};
 
 author="Soldiers in Arms";
-onLoadMission="Welcome to Zeus with Soldiers in Arms!  Version 2.098";
+onLoadMission="Welcome to Zeus with Soldiers in Arms!  Version 2.099";
 
 respawn=3;
 respawnDelay=30;
