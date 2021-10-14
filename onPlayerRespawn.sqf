@@ -1,12 +1,3 @@
-
-removeAllWeapons player;
-removeGoggles player;
-removeHeadgear player;
-removeVest player;
-removeUniform player;
-removeAllAssignedItems player;
-clearAllItemsFromBackpack player;
-removeBackpack player;
 _loadout = player getVariable "Saved_Loadout";
 
 
@@ -23,6 +14,7 @@ if (group player != _sqd) then {player joinSilent _sqd};
 
 
 //Update ACRE PTT Assignment
+sleep 3;
 waitUntil { ([] call acre_api_fnc_isInitialized) };
 ["loadRadioDefaultSpatials", []] execVM "sia_f\ACRERadioSetup.sqf";
 ["reorderRadioMPTT", ["ACRE_PRC343"]] execVM "sia_f\ACRERadioSetup.sqf";

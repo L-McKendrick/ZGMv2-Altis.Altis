@@ -21,6 +21,9 @@
 */
 
 if (!hasInterface) exitWith {}; // Exit if not player.
+waitUntil { ([] call acre_api_fnc_isInitialized) }; // Wait until player's radios are initlialized.
+
+private _hasRadio = [player] call acre_api_fnc_hasRadio; // Get variable if player has radio.
 
 private ["_mode", "_params"];
 _mode   = _this param [0, "", [""]];
@@ -49,15 +52,12 @@ switch (_mode) do
 
 	case "loadRadioDefaultSpatials" :
 	{
-		waitUntil { ([] call acre_api_fnc_isInitialized) }; 
 		private _hash = _this call fnc_sia_getACREHash; // Get hash of settings.
 		{
 			if ([player, _x] call acre_api_fnc_hasKindOfRadio) then { 
 			[([_x] call acre_api_fnc_getRadioByType), _y] call acre_api_fnc_setRadioSpatial; 
 			};
 		} forEach _hash; // Loop through saved settings, checking if player has that radio and applying the saved setting.
-
-		//hint "Radio spatializations (ear assignment) loaded.";
 	};
 
 	case "resetRadioDefaultSpatials" :
@@ -80,7 +80,10 @@ switch (_mode) do
 	
 	case "reorderRadioMPTT" :
 	{
-		private  _radio = ([_params select 0] call acre_api_fnc_getRadioByType);
+		_radioType = (_params select 0);
+		_hasRadio = [player, _radioType] call acre_api_fnc_hasKindOfRadio;
+		if (!_hasRadio) exitWith {};
+		private  _radio = ([_radioType] call acre_api_fnc_getRadioByType);
 		private _mptt = [] call acre_api_fnc_getMultiPushToTalkAssignment;
 		private _index = _mptt find _radio;
 
