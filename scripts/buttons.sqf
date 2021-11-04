@@ -83,7 +83,7 @@ if (!isNil "sk1") then {sk1 addAction ["PULL", "scripts\launch_skeet.sqf"]};
 	[(typeOf player), 1, ["ACE_SelfActions", "SIA"], _action] call ace_interact_menu_fnc_addActionToClass;
 
 	// SIA Radio Actions
-	_action = ["SIA_ConfigACRE", "ACRE Settings", "", {}, {true}] call ace_interact_menu_fnc_createAction;
+	_action = ["SIA_ConfigACRE", "ACRE Settings", "\A3\Ui_F\Data\IGUI\Cfg\simpleTasks\types\radio_ca.paa", { ["loadRadioDefaultSpatials", []] execVM "sia_f\ACRERadioSetup.sqf"; ["reorderRadioMPTT", ["ACRE_PRC343"]] execVM "sia_f\ACRERadioSetup.sqf"; hint "Loaded saved settings." }, {true}] call ace_interact_menu_fnc_createAction;
 	[(typeOf player), 1, ["ACE_SelfActions", "SIA"], _action] call ace_interact_menu_fnc_addActionToClass;
 
 {
@@ -100,13 +100,13 @@ if (!isNil "sk1") then {sk1 addAction ["PULL", "scripts\launch_skeet.sqf"]};
 
 } forEach ["ACRE_PRC343", "ACRE_PRC148","ACRE_PRC152","ACRE_PRC77","ACRE_PRC117F"];
 
-	_action = ["SIA_loadSpatials", "Load Saved Settings", "", { ["loadRadioDefaultSpatials", []] execVM "sia_f\ACRERadioSetup.sqf" }, {true}] call ace_interact_menu_fnc_createAction;
+	_action = ["SIA_loadSpatials", "Load Saved Settings", "", { ["loadRadioDefaultSpatials", []] execVM "sia_f\ACRERadioSetup.sqf"; ["reorderRadioMPTT", ["ACRE_PRC343"]] execVM "sia_f\ACRERadioSetup.sqf"; hint "Loaded saved settings." }, {true}] call ace_interact_menu_fnc_createAction;
 	[(typeOf player), 1, ["ACE_SelfActions", "SIA", "SIA_ConfigACRE"], _action] call ace_interact_menu_fnc_addActionToClass;
 
 	_action = ["SIA_resetSpatials", "Clear Saved Settings", "", { ["resetRadioDefaultSpatials", []] execVM "sia_f\ACRERadioSetup.sqf" }, {true}] call ace_interact_menu_fnc_createAction;
 	[(typeOf player), 1, ["ACE_SelfActions", "SIA", "SIA_ConfigACRE"], _action] call ace_interact_menu_fnc_addActionToClass;
 
-	_action = ["SIA_getSpatials", "Print Saved Settings", "", { ["printRadioDefaultSpatials", []] execVM "sia_f\ACRERadioSetup.sqf" }, {true}] call ace_interact_menu_fnc_createAction;
+	_action = ["SIA_getSpatials", "Print Saved Settings", "", { ["printRadioDefaultSpatials", []] execVM "sia_f\ACRERadioSetup.sqf";  }, {true}] call ace_interact_menu_fnc_createAction;
 	[(typeOf player), 1, ["ACE_SelfActions", "SIA", "SIA_ConfigACRE"], _action] call ace_interact_menu_fnc_addActionToClass;
 
 	
