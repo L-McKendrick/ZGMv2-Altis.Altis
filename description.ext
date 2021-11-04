@@ -32,7 +32,7 @@ class CfgFunctions
 #include "node_modules\@gruppe-adler\replay\ui\dialog.hpp"
 
 class GRAD_Replay {
-    precision = 1;                                    // precision of replay, 5 means every 5 seconds one snapshot (number)
+    precision = 5;                                    // precision of replay, 5 means every 5 seconds one snapshot (number)
     trackedSides[] = {"west", "east", "independent"};    // defines the sides that will be tracked (possible are "west", "east", "independent", "civilian") (array)
     stepsPerTick = 1;                                 // defines steps played back at once (number)
     trackedVehicles = 1;                              // defines if empty and AI steered vehicles will be tracked (0/1)
@@ -55,7 +55,7 @@ disabledAI = 1;
 respawnTemplates[] = {"ace_spectator","Counter","Wave"};
 
 author="Soldiers in Arms";
-onLoadMission="Welcome to Zeus with Soldiers in Arms!  Version 2.099";
+onLoadMission="Welcome to Zeus with Soldiers in Arms!  Version 2.10";
 
 respawn=3;
 respawnDelay=30;
