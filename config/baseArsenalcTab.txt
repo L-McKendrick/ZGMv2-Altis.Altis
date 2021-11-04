@@ -1,0 +1,1 @@
+["kat_Painkiller","ACE_SpareBarrel","acex_intelitems_notepad","Chemlight_blue","Chemlight_green","Chemlight_red","ACE_HandFlare_Yellow","ACE_HandFlare_White","ACE_HandFlare_Red","ACE_HandFlare_Green","kat_X_AED","ACE_ATragMX","ItemAndroid","ACE_HuntIR_monitor","ItemcTabHCam","ItemcTab","ItemMicroDAGR"]
