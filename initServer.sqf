@@ -1,5 +1,6 @@
 loadComplete = false;
 publicVariable "loadoutComplete";
+private _loadout = "";
 
 // Initialize Dynamic Groups for server
 ["Initialize"] call BIS_fnc_dynamicGroups;
@@ -11,7 +12,7 @@ if ((paramsArray select 3) == 1) then {
 
 arsenals = [];
 bases = ["base_mil", "base_para", "base_guer"];
-_factionList = ["aaf_blu","ana","ana_sf","anp_bp","anp","ada_blu","adp_blu","us_cw_early","us_cw_late","us_cw_late_bo","mdf","mdf_sf","tna_blu","tna_sf_blu","tnp_blu","taki_militia","cdf_blu","ctrg_pac","fia","gendarmerie","hidf","nato","nato_pac","nato_w","us_army_90s","us_cia","us_seals","us_army_d","us_army_w","us_socom","us_mc_d","us_mc_w","aaf_ind","ada_ind","adpara_ind","adm_ind","adp_ind","ard_ind","chern_militia","chern_police","kdf_ind","napa","tna_ind","tna_sf_ind","tnp_ind","taki_fighters","un_ind","aja_ind","ldf","saf_sf","saf","saf_early","syndikat","aaf_opf","ada_opf","adp_opf","ade_opf","chdkz","chdkz_winter","chern_commies","ussr_early","ussr_late","ussr_late_sf","tna_opf","tna_sf_opf","tnp_opf","taki_insurgents","csat","csat_pac","russia_emr","russia_emr_d","russia_sf","tla","mas_chi_army","mas_chi_army_n","mas_chi_army_s","mas_chi_army_w"];
+_factionList = ["aaf_blu","ana","ana_sf","anp_bp","anp","ada_blu","adp_blu","us_cw_early","us_cw_late","us_cw_late_bo","mdf","mdf_sf","tna_blu","tna_sf_blu","tnp_blu","taki_militia","cdf_blu","cdf_para_blu","ctrg_pac","fia","gendarmerie","hidf","nato","nato_pac","nato_w","us_army_90s","us_cia","us_seals","us_army_d","us_army_w","us_socom","us_mc_d","us_mc_w","aaf_ind","ada_ind","adpara_ind","adm_ind","adp_ind","ard_ind","chern_militia","chern_police","kdf_ind","napa","tna_ind","tna_sf_ind","tnp_ind","taki_fighters","un_ind","aja_ind","ldf","saf_sf","saf","saf_early","syndikat","aaf_opf","ada_opf","adp_opf","ade_opf","chdkz","chdkz_winter","chern_commies","ussr_early","ussr_late","ussr_late_sf","tna_opf","tna_sf_opf","tnp_opf","taki_insurgents","csat","csat_pac","russia_emr","russia_emr_d","russia_sf","tla"];
 
 //Get faction from lobby parameters
 if ((paramsArray select 0) == -1) then {
@@ -65,7 +66,9 @@ _logics = allMissionObjects "Logic";
 {_x enableSimulationGlobal true} forEach _logics;
 
 // Get faction name from config
-_factionClass = getText (configfile >> "CfgVehicles" >> (factionLoadouts select 0) >> "faction");
+_loadout = factionLoadouts select 0;
+if (typeName _loadout == "ARRAY") then { _loadout = (_loadout select 0) };
+private _factionClass = getText (configfile >> "CfgVehicles" >> _loadout >> "faction");
 factionName = getText (configfile >> "CfgFactionClasses" >> _factionClass >> "displayName");
 publicVariable "factionName";
 
@@ -136,18 +139,21 @@ if (!(isNil "hq_ai")) then {
 		_x enableSimulationGlobal true;
 		[_x, false] remoteExec ["allowDamage"];
 		
-		_loadout = factionLoadouts select random 4;
-		
 		// Check if unit is officer and apply officer loadout, otherwise apply randomly selected infantry loadout
 		if (rank _x == "LIEUTENANT") then {
 			// Apply officer loadout from factionLoadouts
-			_x setUnitLoadout (factionLoadouts select 9);
+			_loadout = (factionLoadouts select 9);
+			if (typeName _loadout == "ARRAY") then { _loadout = (_loadout select 0) };
+			_x setUnitLoadout (getUnitLoadout _loadout);
 			if ((getNumber(configFile >> "CfgWeapons" >> (headgear _x) >> "ItemInfo" >> "HitpointsProtectionInfo" >> "Head" >> "armor")) > 0) then {removeHeadgear _x};	
 			removeAllWeapons _x; 
 			removeVest _x; 
 			removeBackpack _x
 		} else {
 			_x setUnitLoadout (_loadout);
+			_loadout = factionLoadouts select random 4;
+			if (typeName _loadout == "ARRAY") then { _loadout = (_loadout select 0) };
+			_x setUnitLoadout (getUnitLoadout _loadout);
 			if (rank _x == "SERGEANT") then {removeAllWeapons _x; removeBackpack _x};
 			if (rank _x == "CORPORAL") then {removeBackpack _x; _x removeWeaponGlobal (secondaryWeapon _x)};
 		};

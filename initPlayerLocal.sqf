@@ -50,6 +50,7 @@ execVM "scripts\introText.sqf";
 
 // Initialize group manager
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups; 
-["SetPrivateState", [group player, true]] call BIS_fnc_dynamicGroups; // locks group by default
+["SetPrivateState", [group player, false]] call BIS_fnc_dynamicGroups; // locks group by default
 
 execVM "scripts\buttons.sqf"; 
+[player] call ace_medical_treatment_fnc_fullHealLocal;
