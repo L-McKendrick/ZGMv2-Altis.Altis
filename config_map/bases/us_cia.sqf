@@ -1,0 +1,1 @@
+script_handler = execVM "config_map\bases\us_army_d.sqf";
