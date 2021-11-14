@@ -1,2 +1,2 @@
-onLoadName="ZGM v2 - Altis";
-briefingName = "ZGM v2 - Altis";
+onLoadName="ZGM v2 - Cam Lao Nam";
+briefingName = "ZGM v2 - Cam Lao Nam 2.11";
