@@ -93,8 +93,10 @@ _loadout = _loadout arrayIntersect _loadout select {_x isEqualType "" && {_x != 
 
 _radio = "ACRE_PRC343";
 // Check if player has room for a radio, if not then make room and give radio.
+if (!([player] call acre_api_fnc_hasRadio)) then {
 if (!(player canAdd _radio)) then { _uniform = uniformContainer player; clearMagazineCargo _uniform };
 player addItem _radio;
+};
 
 // Give radios to player with lead roles
 if (_role == "tl" || _role == "sl" || _role == "pl" || _role == "sniper" || _role == "zeus") then {
