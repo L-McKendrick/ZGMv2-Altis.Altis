@@ -8,7 +8,7 @@ _action = ["TpSL", "Teleport to Squad", "z\ace\addons\arsenal\data\iconPublic.pa
 			hint "Kit saved. Will be loaded on respawn for this mission ONLY."
 		};
 		
-	_action = ["Loadout", "Save/Manage Kit", "\A3\Ui_F\Data\IGUI\Cfg\Actions\gear_ca.paa", _statement, {true}] call ace_interact_menu_fnc_createAction;
+	_action = ["Loadout", "Manage Respawn Kit", "\A3\Ui_F\Data\IGUI\Cfg\Actions\gear_ca.paa", _statement, {true}] call ace_interact_menu_fnc_createAction;
 	[_x, 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToObject;
 
 	_action = ["SaveKit", "Save Current Kit", "\A3\Ui_F\Data\GUI\Rsc\RscDisplayArcadeMap\icon_save_ca.paa", _statement, {true}] call ace_interact_menu_fnc_createAction; 
